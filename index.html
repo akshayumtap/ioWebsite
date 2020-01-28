@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/slick.css'>
+    <link rel='stylesheet' href='css/slick-theme.css'>
+    <link rel='icon' href='css/images/favicon.ico' type='image/x-icon'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='slick.min.js'></script>
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-132755085-1'></script>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'> -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <script type='text/javascript'>
+      var scrollingElement = (document.scrollingElement || document.body);
+      function scrollToEmail() {
+         $(scrollingElement).animate({
+            scrollTop: document.body.scrollHeight
+         }, 500);
+      }
+      function scrollToCustomers() {
+        $(scrollingElement).animate({
+           scrollTop: $('.div-two').offset().top
+        }, 500);
+      }
+      function scrollToHow() {
+        $(scrollingElement).animate({
+           scrollTop: $('.div-four-child').offset().top
+        }, 500);
+      }
+      function scrollToBenefits() {
+        $(scrollingElement).animate({
+           scrollTop: $('.div-three').offset().top
+        }, 500);
+      }
+      function colorChange() {
+        $('.textbox').css({color: 'white'})
+      }
+      function sendEmail() {
+        var email = $('.textbox').val()
+        var emailReg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        if (!email.match(emailReg)) {
+          $('.error').html('Please, Enter a valid Email')
+          $('.error').css({color: 'red'})
+          $('.error').show()
+          $('.textbox').css({color: 'red'})
+          return false;
+        }
+        $.ajax({url: 'mail.php?from='+email, success: function(result){
+          $('.textbox').val('')
+          $('.error').html('Thank you..')
+          $('.error').css({color: 'green'})
+          $('.error').show()
+        }});
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-132755085-1');
+      }
+      $(document).ready(function(){
+        $('.demo').slick({
+          slidesToShow: 5,
+          slidesToScroll: 5,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          arrows: false,
+          dots: true,
+          dotsClass: 'slick-dots',
+          responsive: [
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            }
+          ]
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class='safe-container'>
+      <div class='div-one'>
+        <div class='header-menu'>
+          <div class='logo'><img src='css/images/logo.svg' style='width: 170px' /></div>
+          <div class='customers pointer' onClick='scrollToCustomers()'>Our Customers</div>
+          <div class='benefits pointer' onClick='scrollToBenefits()'>Benefits</div>
+          <div class='how pointer' onClick='scrollToHow()'>How We Do It</div>
+          <div class='contact pointer' onClick='scrollToEmail()'>Contact Us</div>
+        </div>
+        <div class='half-div'>
+            <label class='title-header'>Empowering Safety & Automation in
+              School transportation</label>
+            <p>Safetrax automates end-to-end transport operations and
+              infuses advanced child safety at your school.
+              Sign up now to transform your school transportation!</p>
+              <input type='button' value='Get Started' class='button'
+              onClick='scrollToEmail()' />
+        </div>
+      </div>
+      <div class='div-two'>
+        <div class='header customer-header' style='margin-top:0px'>Our Customers</div>
+        <div class='slider demo'>
+          <div class='item'>
+            <img src='css/images/customer/1.png'
+            style='height: 65px;margin-top:30px;' />
+          </div>
+          <div class='item'><img src='css/images/customer/2.png'
+            style='width: 105px;margin-left:15px;' /></div>
+          <div class='item'><img src='css/images/customer/3.png'
+            style='height: 75px;margin-top:25px;' /></div>
+          <div class='item'><img src='css/images/customer/4.png'
+            style='height: 100px;margin-top:15px;'/></div>
+          <div class='item'><img src='css/images/customer/5.png'
+            style='height: 90px;margin-top:25px;' /></div>
+            <div class='item'><img src='css/images/customer/6.jfif' /></div>
+            <div class='item'><img src='css/images/customer/7.jfif' /></div>
+            <div class='item'><img src='css/images/customer/8.jfif' /></div>
+            <div class='item'><img src='css/images/customer/9.jfif' /></div>
+            <div class='item'><img src='css/images/customer/10.jfif' /></div>
+            <div class='item'><img src='css/images/customer/11.jfif' /></div>
+            <div class='item'><img src='css/images/customer/12.jfif' /></div>
+            <div class='item'><img src='css/images/customer/13.jfif'
+              style='height: 70px;margin-top:30px;'/></div>
+            <div class='item'><img src='css/images/customer/14.jfif'
+              style='height: 60px;margin-top:30px;'/></div>
+            <div class='item'><img src='css/images/customer/15.jfif'
+              style='height: 75px;margin-top:25px;' /></div>
+            <div class='item'><img src='css/images/customer/16.jfif'
+              style='height: 90px;margin-top:15px;'/></div>
+            <div class='item'><img src='css/images/customer/18.jfif'
+              style='height: 80px;margin-top:25px;' /></div>
+            <div class='item'><img src='css/images/customer/17.jfif'
+              style='height: 100px;margin-top:10px;'/></div>
+            <div class='item'><img src='css/images/customer/19.jfif'
+              style='height: 95px;margin-top:20px;'/></div>
+            <div class='item'><img src='css/images/customer/20.jfif' /></div>
+            <div class='item'><img src='css/images/customer/21.png' /></div>
+            <div class='item'><img src='css/images/customer/22.png'
+              style='height: 80px;margin-top:15px;'/></div>
+            <div class='item'><img src='css/images/customer/23.png' /></div>
+            <div class='item'><img src='css/images/customer/24.png'
+              style='height: 90px;margin-top:25px;' /></div>
+            <div class='item'><img src='css/images/customer/25.png'
+              style='height: 75px;margin-top:30px;' /></div>
+            <div class='item'><img src='css/images/customer/26.png'
+              style='height: 50px;margin-top:35px;' /></div>
+            <div class='item'><img src='css/images/customer/27.png' /></div>
+            <div class='item'><img src='css/images/customer/28.jpg' /></div>
+        </div>
+      </div>
+      <div class='div-three'>
+        <div class='header'>Benefits</div>
+        <div class='half-div' style='width:50%'>
+          <label style='font-size:20px'>Automation</label>
+          <div class='automation-div'></div>
+          <div class='div-four-div-text'  >
+            <p style='text-align: left'>
+              Mobile trip sheets for drivers and admins, 
+              E-rostering and auto routing, 
+              Auto - billing calculation & advanced reports</p>
+          </div>
+        </div>
+        <div class='half-div' style='width:50%'>
+          <label style='font-size:20px'>Safety</label>
+          <div class='safety-div'></div>
+          <div class='div-four-div-text' >
+            <p style='text-align: left'>
+              Pick-up and Drop confirmations on Mobile, 
+              Live Tracking for parents and admins,
+            Driver behaviour monitoring</p>
+          </div>
+        </div>
+      </div>
+      <div class='div-four'>
+          <label style='font-size:20px'>Peace of mind</label>
+          <div class='peace-div'></div>
+          <div class='div-four-div-text' >
+            <p style='text-align: left'>Vehicle proximity alerts<br />
+              Attendance to keep track of kids.<br />
+            Guardian app for nannies and neighbours.</p>
+          </div>
+          <div class='div-four-child'>
+            <div class='header' style='margin: 3% 0'>How we do it ?</div>
+            <div class='half-div'>
+              <label class='title-header'>For School's Transport Teams</label>
+              <p>
+                  You will love our feature rich dashboard and tools that help you manage every
+                  aspect of operations. We are making your life easy, empowered and in control
+                  with Safetrax. Gain super visibility into transport billing and optimize for efficiency.
+                  You would not have know how efficient your team can get untill you have used
+                  Safetrax. Trust out customer's world for it!
+              </p>
+              <label class='sub-title-header'>Transport Admin</label>
+              <p>
+                Get detailed view of daily triips, fuel rates, in-time vehicles and much more
+              </p>
+              <input type='button' value='Get Started' class='button' onClick='scrollToEmail()' />
+            </div>
+            <div class='half-div' style='text-align: center'>
+              <img src='css/images/PC_raptor.svg' class='track' />
+            </div>
+        </div>
+      </div>
+      <div class='div-five'>
+        <div class='half-div' style='text-align: center'>
+            <img src='css/images/mobile_pareent.svg' class='track'  />
+        </div>
+        <div class='half-div'>
+          <label class='title-header'>For Parents</label>
+          <p>
+            Feel assured of where your child is - in every moment of their travel with Safetrax.
+            What more, you will even be alerted on the vehicle approaching pick up, getting
+            delayed and reaching the school and back home. You can even track the bus in real time.
+          </p>
+          <p>
+            Do you want someone else to pick up your child for you? But worried at work
+            of your child's safety? We have taken care of this too. Our smart guardian app
+            keeps you informed!
+          </p>
+          <label class='sub-title-header'>Parent</label>
+          <p>
+            Our Andriod and IOS app helps you keep the track of your kid at any moment
+          </p>
+          <input type='button' value='Get Started' class='button' onClick='scrollToEmail()' />
+        </div>
+      </div>
+      <div class='div-six'>
+        <div class='half-div' style='padding-top: 7%'>
+          <label class='title-header'>Track From Anywhere</label>
+          <p>
+              Are you a school transportation manager, a parent or a guardian or all of it?
+              Safetrax has everything that you need and more! Reach out to us now
+          </p>
+        </div>
+        <div class='half-div' style='text-align: center'>
+          <img src='css/images/track.svg' class='track' />
+        </div>
+      </div>
+      <div class='div-seven'>
+        <div class='half-div' style='width: 50%'>
+          <label class='title-header'>Arriving to a school near you!</label>
+          <p>
+            Safetrax is the future of school transportation! And we want you to experience it before anyone else does.
+            Sign up now for early bird offer. premium benefits and much more!
+          </p>
+        </div>
+        <div class='half-div email-div' style='width: 22%'>
+            <input type='text' placeholder='E-Mail' class='textbox' onfocus='colorChange()' />
+            <img src='css/images/button.svg' class='email-submit' onclick='sendEmail()' />
+            <div class='error'></div>
+        </div>
+      </div>
+      <div class='div-footer'>
+        <img src='css/images/footer_logo.png' />
+        <div class='copyright'> Copyright 2019 &copy; Safetrax. All Rights Reserved. </div>
+      </div>
+    </div>
+  </body>
+</html>
